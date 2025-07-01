@@ -483,3 +483,36 @@ footer {
   }
 }
 
+.article-list-section {
+  max-width: 620px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+.article-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.article-list li {
+  border-bottom: 1px solid #e3edf5;
+  margin-bottom: 0.4rem;
+  padding: 0.5em 0;
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+.article-list a {
+  color: #1b648c;
+  text-decoration: none;
+  transition: color 0.18s;
+  padding: 0.1em 0;
+  border-radius: 6px;
+  display: inline-block;
+  position: relative;
+}
+.article-list a:hover, .article-list a:focus {
+  color: #ffcd21;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2.5px;
+  background: #e6f7ff;
+}
