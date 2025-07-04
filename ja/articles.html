@@ -1,41 +1,98 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>文章 | XIANG ZICHAN</title>
+  <title>記事｜XIANG ZICHAN</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    .accordion-list { max-width: 660px; margin: 40px auto; padding: 0 12px; list-style: none; }
+    .accordion-item { margin-bottom: 1.1em; border-radius: 12px; box-shadow: 0 1px 6px rgba(90,140,170,0.07); background: #f8fbfd; border: 1px solid #e0eef2; overflow: hidden; transition: box-shadow .17s;}
+    .accordion-title { display: flex; align-items: center; font-size: 1.14rem; font-weight: 600; cursor: pointer; color: #22649e; padding: 1em 1.4em 1em 1.2em; background: none; border: none; width: 100%; text-align: left; outline: none; transition: background .15s; position: relative; letter-spacing: 0.02em;}
+    .accordion-title:hover { background: #eaf6ff; color: #ffcd21;}
+    .accordion-title::after { content: "▼"; font-size: 0.96em; color: #bbb; margin-left: auto; transition: transform .22s;}
+    .accordion-title[aria-expanded="true"]::after { transform: rotate(-180deg); color: #eeb700;}
+    .accordion-content { max-height: 0; overflow: hidden; background: #fffbe6; color: #234; font-size: 1.01rem; padding: 0 1.5em; border-top: 1px solid #ece9d6; transition: max-height .4s cubic-bezier(.25, .8, .25, 1);}
+    .accordion-item.open .accordion-content { padding: 1.05em 1.5em; max-height: 1000px; transition: max-height .44s cubic-bezier(.25, .8, .25, 1);}
+    @media (max-width: 700px) {
+      .accordion-list { padding: 0 1vw;}
+      .accordion-title { font-size: 1em; padding: 0.9em 1em 0.9em 1em;}
+      .accordion-content { font-size: 0.97em; padding: 0 1em;}
+      .accordion-item.open .accordion-content { padding: 0.85em 1em;}
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>文章</h1>
+    <h1>記事</h1>
     <nav>
-      <a href="../index.html">ホーム</a>
+      <a href="index.html">ホーム</a>
       <a href="artist_statement.html">ステートメント</a>
       <a href="works.html">作品</a>
-      <a href="articles.html">文章</a>
+      <a href="articles.html" class="selected">記事</a>
       <a href="resume.html">履歴</a>
       <a href="contact.html">連絡先</a>
       <span class="lang-switch">
-        <a href="en/articles.html">EN</a> /
-        <a href="ja/articles.html">JA</a> /
-        <a href="articles.html">CH</a>
+        <a href="../en/articles.html">EN</a> /
+        <a href="../ja/articles.html" class="current-lang">JA</a> /
+        <a href="../articles.html">CH</a>
       </span>
     </nav>
   </header>
-
   <main>
-    <section class="article-list-section">
-      <ul class="article-list">
-        <li><a href="articles/article1.html">「中屋敷智生×光島貴之〈みるものたち〉」</a></li>
-
-        <!-- 更多文章可以继续加 -->
-      </ul>
-    </section>
+    <ul class="accordion-list">
+      <li class="accordion-item">
+        <button class="accordion-title" aria-expanded="false">「中屋敷智生×光島貴之〈みるものたち〉」展感想</button>
+        <div class="accordion-content">
+          <p>
+            今回、東京の「BUG ART SWEATER」で開催された展覧会は、色覚障害を持つアーティストと視覚障害を持つアーティストが共同で創作に参加し、「視覚の障害」を軸に非常に挑戦的かつ示唆に富んだ芸術実践を行った。私は、この展覧会が「見ること」と「アート」に対する私たちの既成概念を覆すだけでなく、芸術の本質に対する人々の感覚的な境界を広げるものだと感じた。
+          </p>
+          <p>
+            展示された作品は、アーティストの許可のもと、鑑賞者が直接手で触れることができるようになっている。表面の起伏、粗さや滑らかさ、素材の境界などの触覚的な要素が、「視覚に頼らない絵画体験」を構成する。多くの鑑賞者にとってこれは未知でありながら深い感触体験であり、新たな「見る方法」を学ぶ機会にもなっている。
+          </p>
+          <p>
+            私たちは通常、絵画を「見る」芸術として捉えている。特に視覚化・デジタル化が進んだ今日のイメージ社会においては、「視覚」こそがアートへの唯一の入り口のように考えられている。しかし、その前提は初めから一部の人々に対して扉を閉ざしている。視覚障害や色覚障害を持つ人々による創作や体験は、芸術が単なる色彩や形状の認識に留まらず、触覚や音、さらには時間や記憶を再現する手段にもなり得ることを私たちに気づかせる。
+          </p>
+          <p>
+            さらに、この展覧会を通して、現代社会が身体的な差異や感覚の多様性を徐々に受け入れ始めていることも明らかになった。健常な身体を前提とする視点から離れ、芸術はより開かれた、包容力のある方向へと進んでいる。「障害」はもはや欠落ではなく、独自の媒介であり、世界を新たに理解するための入り口となっている。
+          </p>
+        </div>
+      </li>
+      <li class="accordion-item">
+        <button class="accordion-title" aria-expanded="false">「」</button>
+        <div class="accordion-content">
+          <p>
+           
+          </p>
+        </div>
+      </li>
+      <li class="accordion-item">
+        <button class="accordion-title" aria-expanded="false">「」</button>
+        <div class="accordion-content">
+          <p>
+            
+          </p>
+        </div>
+      </li>
+    </ul>
   </main>
-
   <footer>
     <p>© 2025 XIANG ZICHAN. All rights reserved.</p>
   </footer>
+  <script>
+    document.querySelectorAll('.accordion-title').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.accordion-item').forEach(function(i){
+          i.classList.remove('open');
+          i.querySelector('.accordion-title').setAttribute('aria-expanded','false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded','true');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
